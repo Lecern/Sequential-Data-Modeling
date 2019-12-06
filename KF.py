@@ -5,7 +5,7 @@ def update_parameter(x, sigma, eta, mu, P, log_likelihood):
     if log_likelihood is None:
         _mu_prev = mu
         _P_prev = P
-        _log_likelihood = np.log(norm.pdf(x, _mu_prev, _P_prev + sigma))
+        _log_likelihood = np.log(norm.pdf(x, _mu_prev, np.sqrt(_P_prev + sigma)))
         _x = 0
     else:
         _mu_prev = mu
