@@ -61,7 +61,7 @@ w1[1,1] = (b_3 + 1) / 10
 w2[0,0] = (b_1 + 1) / 10
 w2[0,1] = - (b_2 + 1) / 10 
 
-model = NN(w1, w2, 1)
+model = NN(w1, w2, 0.2)
 print(model.forward(np.array([[1], [1]])))
 model.update(1)
 print(model.forward(np.array([[1], [1]])))
@@ -69,8 +69,8 @@ print(model.forward(np.array([[0], [1]])))
 model.update(-1)
 print(model.forward(np.array([[0], [1]])))
 print(model.forward(np.array([[1], [0]])))
-model.update(-1)
+model.update(1)
 print(model.forward(np.array([[1], [0]])))
 print(model.forward(np.array([[0], [0]])))
-model.update(1)
+model.update(-1)
 print(model.forward(np.array([[0], [0]])))
