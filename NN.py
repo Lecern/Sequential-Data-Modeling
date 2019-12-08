@@ -53,6 +53,7 @@ w1[0,1] = (b_1 + 1) / 10
 w1[1,1] = (b_3 + 1) / 10
 w2[0,0] = (b_1 + 1) / 10
 w2[0,1] = - (b_2 + 1) / 10 
+print(w1, w2)
 
 model = NN(w1, w2, 1)
 print(model.forward(np.array([[1], [1]])))
